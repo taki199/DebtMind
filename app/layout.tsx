@@ -1,5 +1,7 @@
+import Footer from "@/components/common/footer";
+import Header from "@/components/common/header";
 import type { Metadata } from "next";
-import { Source_Sans_3 as FontSans } from "next/font/google";
+import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -22,7 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fontSans.variable} font-sans antialiased`}>
-        {children}
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
